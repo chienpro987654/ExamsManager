@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:paddingBottom="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_grade"
+        android:background="@drawable/after_submit_dialog"
+        android:paddingVertical="8sp"
+        android:text="8.0"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="36sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xin chúc mừng! Bạn đã hoàn thành bài kiểm tra."
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:paddingVertical="16dp"
+        android:textColor="@color/black"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_OK"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="OK"
+            android:backgroundTint="@color/blue_60percent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

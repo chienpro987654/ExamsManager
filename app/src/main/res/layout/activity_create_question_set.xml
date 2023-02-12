@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cons_layout_create"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:backgroundTint="@color/light_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="10dp"
+        android:paddingBottom="@dimen/margin_basex2"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_name_set_create"
+            android:text="Tên: "
+            android:textSize="@dimen/text_large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <EditText
+            android:id="@+id/name_set_input_create"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/blue_border_rounded_cornwe"
+            android:minHeight="48dp"
+            android:paddingHorizontal="10dp"
+            android:textSize="@dimen/text_large"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_name_set_create"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_name_set_create"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_date_create_detail"
+            android:text="Người tạo: "
+            android:textSize="@dimen/text_large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_set_create"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <EditText
+            android:id="@+id/creator_input_create"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/blue_border_rounded_cornwe"
+            android:minHeight="48dp"
+            android:paddingHorizontal="10dp"
+            android:textSize="@dimen/text_large"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_date_create_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_date_create_detail"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_grade_detail"
+            android:text="Môn: "
+            android:textSize="@dimen/text_large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date_create_detail"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <EditText
+            android:id="@+id/grade_input_create"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/blue_border_rounded_cornwe"
+            android:minHeight="48dp"
+            android:paddingHorizontal="10dp"
+            android:textSize="@dimen/text_large"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_grade_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_grade_detail"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_date_create"
+            android:text="Ngày tạo: "
+            android:textSize="@dimen/text_large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_grade_detail"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <EditText
+            android:id="@+id/date_create_input_create"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/blue_border_rounded_cornwe"
+            android:enabled="false"
+            android:minHeight="48dp"
+            android:paddingHorizontal="10dp"
+            android:textSize="@dimen/text_large"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_date_create"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_date_create"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_create_question_by"
+            android:text="Tạo câu hỏi: "
+            android:textSize="@dimen/text_large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date_create"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup_select_create_question_by"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/blue_border_rounded_cornwe"
+            app:layout_constraintTop_toTopOf="@id/tv_create_question_by"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_create_question_by" >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_button_1"
+                android:text="Tự tạo"
+                android:textSize="@dimen/text_medium_large" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_button_2"
+                android:text="Nhập từ file word"
+                android:textSize="@dimen/text_medium_large" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_file"
+            android:text="File: "
+            android:textSize="@dimen/text_large"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup_select_create_question_by"
+            android:layout_marginTop="@dimen/margin_base"
+            android:layout_marginStart="20dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_path_of_selected_file"
+            android:textSize="@dimen/text_medium"
+            android:singleLine="false"
+            android:visibility="gone"
+            android:maxHeight="70dp"
+            android:layout_marginStart="@dimen/margin_base"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_file"
+            app:layout_constraintStart_toEndOf="@id/tv_file"
+            app:layout_constraintEnd_toEndOf="@id/radioGroup_select_create_question_by"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Btn_Confirm_Create"
+        android:text="Xác nhận"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/cons_layout_create"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

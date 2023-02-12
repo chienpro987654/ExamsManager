@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_assign_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:fontFamily="@font/poppins_regular"
+        android:inputType="textEmailAddress"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        android:layout_margin="4dp"
+        android:paddingBottom="12dp"
+        android:layout_marginVertical="4dp">
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:maxLines="1"
+            android:text="Tên: "
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tv_lb_assign_name"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tv_lb_assign_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_lb_assign_name"
+            app:layout_constraintBottom_toBottomOf="@id/tv_lb_assign_name"
+            android:id="@+id/tv_assign_name"
+            android:textSize="@dimen/text_medium"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:text="Nhóm: "
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_lb_assign_name"
+            android:id="@+id/tv_lb_assign_group"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tv_lb_assign_group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_lb_assign_group"
+            app:layout_constraintBottom_toBottomOf="@id/tv_lb_assign_group"
+            android:id="@+id/tv_assign_group"
+            android:textSize="@dimen/text_medium"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:text="Người tạo:  "
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_lb_assign_group"
+            android:id="@+id/tv_lb_assign_admin"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tv_lb_assign_admin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_lb_assign_admin"
+            app:layout_constraintBottom_toBottomOf="@id/tv_lb_assign_admin"
+            android:id="@+id/tv_assign_admin"
+            android:textSize="@dimen/text_medium"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:text="Bắt đầu:  "
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_lb_assign_admin"
+            android:id="@+id/tv_lb_assign_open"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tv_lb_assign_open"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_lb_assign_open"
+            app:layout_constraintBottom_toBottomOf="@id/tv_lb_assign_open"
+            android:id="@+id/tv_assign_open"
+            android:textSize="@dimen/text_medium"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:text="Kết thúc: "
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_lb_assign_open"
+            android:id="@+id/tv_lb_assign_close"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tv_lb_assign_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_lb_assign_close"
+            app:layout_constraintBottom_toBottomOf="@id/tv_lb_assign_close"
+            android:id="@+id/tv_assign_close"
+            android:textSize="@dimen/text_medium"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:text="Còn lại: "
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_lb_assign_close"
+            android:id="@+id/tv_lb_assign_countdown"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tv_lb_assign_countdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_lb_assign_countdown"
+            app:layout_constraintBottom_toBottomOf="@id/tv_lb_assign_countdown"
+            android:id="@+id/tv_assign_countdown"
+            android:textSize="@dimen/text_medium"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:text="Trạng thái: "
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_lb_assign_countdown"
+            android:id="@+id/tv_lb_assign_status"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tv_lb_assign_status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_lb_assign_status"
+            app:layout_constraintBottom_toBottomOf="@id/tv_lb_assign_status"
+            android:id="@+id/tv_assign_status"
+            android:textSize="@dimen/text_medium"
+            android:layout_marginEnd="12dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

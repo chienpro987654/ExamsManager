@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "768432568456",
+    "firebase_url": "https://android-project-157ec-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "android-project-157ec",
+    "storage_bucket": "android-project-157ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768432568456:android:e01b0feacf740e4232c73d",
+        "android_client_info": {
+          "package_name": "com.example.androidproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768432568456-b4d2541p02sdc90cop41k6jp0oualasc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMLSBvpctKBlRTJ2Z8ZZqdXi26YHrOIhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768432568456-b4d2541p02sdc90cop41k6jp0oualasc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

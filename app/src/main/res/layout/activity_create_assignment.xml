@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAssignment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cài đặt bài làm"
+                android:textAllCaps="true"
+                android:textSize="24sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/tv_lb_header_edit_assignment"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:background="@color/blue"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thông tin về chế độ (tạo hoặc sửa)"
+                android:id="@+id/tv_assign_setting_mode"
+                app:layout_constraintTop_toBottomOf="@id/tv_lb_header_edit_assignment"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="12sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/margin_base"/>
+
+            <TextView
+                app:layout_goneMarginTop="16dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_assign_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_assign_setting_mode"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="@dimen/text_medium"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="@dimen/margin_base"
+                android:text="Tên bài làm:"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:textSize="@dimen/text_medium"
+                android:id="@+id/et_assignment_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableBottom="@color/blue_60percent"
+                android:minHeight="48dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_assign_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_assign_name"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:textColor="@color/black"
+                android:hint="Nhập tên của bài làm tại đây"
+                android:layout_marginLeft="@dimen/margin_base"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_date_start"
+                app:layout_constraintTop_toBottomOf="@id/tv_assign_name"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_base"
+                android:layout_marginTop="15dp"
+                android:text="Thời gian mở: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"/>
+
+            <TextView
+                android:textSize="@dimen/text_medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_chose_time_start"
+                app:layout_constraintStart_toStartOf="@id/tv_chose_time_end"
+                app:layout_constraintEnd_toStartOf="@id/tv_chose_date_start"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_date_start"
+                android:gravity="center"
+                android:text="Chọn giờ"
+                android:drawableBottom="@color/blue_60percent"
+                tools:ignore="NotSibling"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:textSize="@dimen/text_medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_chose_date_start"
+                app:layout_constraintStart_toEndOf="@id/tv_chose_time_start"
+                app:layout_constraintEnd_toEndOf="@id/et_assignment_name"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_date_start"
+                android:gravity="center"
+                android:text="Chọn ngày"
+                android:drawableBottom="@color/blue_60percent"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:textSize="@dimen/text_medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_date_end"
+                app:layout_constraintTop_toBottomOf="@id/tv_date_start"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_base"
+                android:layout_marginTop="10dp"
+                android:text="Thời gian đóng: "
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:textSize="@dimen/text_medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_chose_time_end"
+                app:layout_constraintStart_toEndOf="@id/tv_date_end"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintEnd_toStartOf="@id/tv_chose_date_end"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_date_end"
+                android:gravity="center"
+                android:text="Chọn giờ"
+                android:drawableBottom="@color/blue_60percent"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:textSize="@dimen/text_medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_chose_date_end"
+                app:layout_constraintStart_toEndOf="@id/tv_chose_time_end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_date_end"
+                android:gravity="center"
+                android:text="Chọn ngày"
+                android:drawableBottom="@color/blue_60percent"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_doingTime"
+                app:layout_constraintTop_toBottomOf="@id/tv_date_end"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_base"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/text_medium"
+                android:text="Thời gian làm bài"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:textSize="@dimen/text_medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_chose_doingTime"
+                app:layout_constraintStart_toEndOf="@id/tv_doingTime"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_doingTime"
+                android:gravity="center"
+                android:text="Chọn thời gian làm bài"
+                android:drawableBottom="@color/blue_60percent"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:textSize="@dimen/text_medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_num_attempt"
+                app:layout_constraintTop_toBottomOf="@id/tv_doingTime"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_base"
+                android:layout_marginTop="10dp"
+                android:text="Số lần làm bài: "
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:textSize="@dimen/text_medium"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tv_chose_time_end"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_num_attempt"
+                android:id="@+id/et_choose_max_attempt"
+                android:inputType="number" />
+
+            <TextView
+                android:textSize="@dimen/text_medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_questionset_code"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_num_attempt"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="@dimen/margin_base"
+                android:text="Mã truy cập của bộ câu hỏi: "
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:textSize="@dimen/text_medium"
+                android:id="@+id/et_questionset_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableBottom="@color/blue_60percent"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_questionset_code"
+                app:layout_constraintStart_toStartOf="@id/et_assignment_name"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:textColor="@color/black"
+                android:hint="Nhập mã code tại đây"
+                android:layout_marginTop="@dimen/margin_base"/>
+
+            <CheckBox
+                android:textSize="@dimen/text_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thêm nội dung thông báo"
+                app:layout_constraintTop_toBottomOf="@id/et_questionset_code"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/margin_base"
+                android:id="@+id/cb_add_notify_content"
+                android:layout_marginStart="@dimen/margin_base"
+                app:layout_goneMarginTop="@dimen/margin_base"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_view_notify_content"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintTop_toBottomOf="@id/cb_add_notify_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="@dimen/margin_base"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="Thông báo: "
+                android:textSize="12sp"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_create_assignment"
+                app:layout_constraintTop_toBottomOf="@id/cb_add_notify_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="@color/blue"
+                android:text="Xác nhận"
+                android:textColor="@color/white"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

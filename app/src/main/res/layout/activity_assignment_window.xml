@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Assignment_Window">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TextView_Assignment_Window"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:textSize="@dimen/text_large"
+        android:background="@color/teal_700"
+        android:textColor="@color/white"
+        android:padding="@dimen/padding_base"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/TextView_TimeRemain_Assignment_Window"
+        app:layout_constraintTop_toBottomOf="@id/TextView_Assignment_Window"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Button_Submit_Assignment_Window"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/text_medium"
+        android:background="@color/teal_200"
+        android:padding="@dimen/padding_base"/>
+
+    <Button
+        android:id="@+id/Button_Submit_Assignment_Window"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray"
+        android:text="@string/submit"
+        android:textColor="#4E342E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TextView_Assignment_Window" />
+
+    <GridView
+        android:id="@+id/Grid_Assignment_Window"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:horizontalSpacing="15dp"
+        android:minHeight="32dp"
+        android:numColumns="auto_fit"
+        android:paddingTop="@dimen/padding_basex2"
+        android:scrollbars="vertical"
+        android:stretchMode="spacingWidthUniform"
+        android:verticalSpacing="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Button_Submit_Assignment_Window"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

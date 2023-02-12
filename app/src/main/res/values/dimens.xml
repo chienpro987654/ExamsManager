@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_small">14sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_medium_large">18sp</dimen>
+    <dimen name="text_large">20sp</dimen>
+    <dimen name="text_ultra">25sp</dimen>
+
+    <dimen name="margin_base">5dp</dimen>
+    <dimen name="margin_basex2">10dp</dimen>
+
+    <dimen name="padding_base">5dp</dimen>
+    <dimen name="padding_basex2">10dp</dimen>
+</resources>

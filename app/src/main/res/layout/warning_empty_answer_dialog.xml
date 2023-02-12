@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:paddingBottom="16dp"
+    android:background="@drawable/blue_border_rounded_cornwe">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_border_top"
+        android:paddingVertical="8sp"
+        android:text="WARNING"
+        android:textAlignment="center"
+        android:textColor="#33691E"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your answer is empty, do you still want to continue?"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:paddingVertical="36dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_cancel_warning_dialog"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Cancel"
+            android:layout_marginStart="@dimen/margin_basex2"
+            android:backgroundTint="@color/blue_60percent"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_continue_warning_dialog"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Continue"
+            android:layout_marginEnd="@dimen/margin_basex2"
+            android:backgroundTint="@color/blue_60percent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

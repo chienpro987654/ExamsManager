@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:paddingBottom="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tạo nhóm mới"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:background="@color/blue"
+                android:paddingVertical="8dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Đặt tên cho nhóm của bạn:"
+                android:textSize="14sp"
+                android:layout_marginStart="4dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/et_create_group_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginTop="8dp"
+                android:hint="Nhập tên nhóm tại đây"
+                android:maxLength="16"
+                android:minHeight="48dp"
+                android:textColor="@color/black"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="4dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:text="Tạo nhóm"
+                    android:backgroundTint="@color/blue"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/tv_create_group_this_is_join_code"
+                    android:id="@+id/bt_create_dialog" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/this_is_join_code"
+                    android:id="@+id/tv_create_group_this_is_join_code"
+                    app:layout_constraintTop_toBottomOf="@id/bt_create_dialog"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:id="@+id/et_create_group_join_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_copy_join_code_create_dialog"
+                    app:layout_constraintTop_toBottomOf="@id/tv_create_group_this_is_join_code"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/tv_copy_join_code_create_dialog"
+                    android:background="@drawable/ic_content_copy"
+                    app:layout_constraintBaseline_toBaselineOf="@id/et_create_group_join_code"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/et_create_group_join_code"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
